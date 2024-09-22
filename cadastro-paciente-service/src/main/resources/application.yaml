@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: cadastro-pacientes
+  # Configuration database
+  datasource:
+    username: ${USER_DATABASE}
+    password: ${PASSWORD_DATABASE}
+    url: ${URL_DATABASE}
+    driver-class-name: org.postgresql.Driver
+  # Flyway configuration
+  flyway:
+    url: ${URL_DATABASE}
+    user: ${USER_DATABASE}
+    password: ${PASSWORD_DATABASE}
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    enabled: true
+  # Deactivating the ddl-auto
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+# Configuration of the naming service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+# Configure the register of a new patient
+server:
+  port: 8082
