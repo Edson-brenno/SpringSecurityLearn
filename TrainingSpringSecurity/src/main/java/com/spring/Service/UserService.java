@@ -1,5 +1,6 @@
 package com.spring.Service;
 
+import com.spring.Dto.RegisterUserDto;
 import com.spring.Dto.UpdateUserDto;
 import com.spring.Dto.UserDto;
 import com.spring.Entity.UsuarioEntity;
@@ -30,7 +31,7 @@ public class UserService {
     }
 
     // register a new user on the database
-    public UserDto createUser(UserDto userDto){
+    public UserDto createUser(RegisterUserDto userDto){
 
         UsuarioEntity newUser = new UsuarioEntity(userDto.nome(), userDto.email());
 
