@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-security
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ${USER_DATABASE}
+    password: ${USER_PASSWORD}
+    url: ${URL_DATABASE}
+  flyway:
+    enabled: true
+    user: ${USER_DATABASE}
+    password: ${USER_PASSWORD}
+    url: ${URL_DATABASE}
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+server:
+  port: 8081
