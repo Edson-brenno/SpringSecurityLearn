@@ -47,16 +47,15 @@ public class AuthUser implements Serializable {
 
     public AuthUser(){}
 
-    public AuthUser(String username, String password, String firstName, String lastName, String email,
-                    boolean is_active, boolean is_staff, boolean is_admin) {
+    public AuthUser(String username, String password, String firstName, String lastName, String email) {
         this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.is_active = is_active;
-        this.is_staff = is_staff;
-        this.is_admin = is_admin;
+        this.is_active = true;
+        this.is_staff = false;
+        this.is_admin = false;
     }
 
     public Long getId() {
