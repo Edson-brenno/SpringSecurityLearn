@@ -1,6 +1,5 @@
 package com.spring.Controller;
 
-import com.spring.Entity.AuthUser;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
