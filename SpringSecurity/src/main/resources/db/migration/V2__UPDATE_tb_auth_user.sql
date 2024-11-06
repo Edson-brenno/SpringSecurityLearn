@@ -1,0 +1,1 @@
+alter table tb_auth_user add constraint uk_username unique(username);
