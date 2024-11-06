@@ -3,6 +3,7 @@ package com.spring.Entity;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -48,6 +49,8 @@ public class AuthUser implements Serializable {
     public AuthUser(){}
 
     public AuthUser(String username, String password, String firstName, String lastName, String email) {
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(16);
+
         this.username = username;
         this.password = password;
         this.firstName = firstName;

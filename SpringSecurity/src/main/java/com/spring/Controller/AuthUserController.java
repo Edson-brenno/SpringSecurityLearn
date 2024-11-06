@@ -39,4 +39,10 @@ public class AuthUserController {
 
         return ResponseEntity.created(new URI(uri)).body(authUser);
     }
+
+    @PostMapping(value = "/tt")
+    public ResponseEntity<Boolean> logar(@RequestBody AuthUserLoginDto authUserLoginDto){
+
+        return ResponseEntity.ok().body(authUserService.logarUser(authUserLoginDto));
+    }
 }
